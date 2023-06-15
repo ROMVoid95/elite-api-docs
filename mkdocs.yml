@@ -1,6 +1,57 @@
-site_name: Elite Dangerous Player Journal
+site_name: Elite Dangerous Journal Manual (Extended)
 
-theme: material
+theme: 
+  name: material
+  locale: en
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to bliding mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to the correct mode
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  features:
+    - content.code.annotate
+    - navigation.instant
+
+repo_url: https://github.com/Lombra/elite-api-docs
+
+plugins:
+  - search
+  - autolinks 
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra_css: 
     - custom.css
